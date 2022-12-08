@@ -1,4 +1,6 @@
 import React from 'react';
+import "./profile.css"
+
 
 import { TypeAnimation } from 'react-type-animation';
 import "./profile.css"
@@ -36,46 +38,50 @@ function Profile() {
           </div>
 
           <div className="profile-details-role">
+
             <span className='primary-text'>
-              <span className='primary-text'>
+              {" "}
+              <div>
                 {" "}
-                <h1>
-                  {" "}
-                  <TypeAnimation
-                    sequence={[
-                      'Developer',
-                      2000, // Waits 2s
-                      'My name is Moran', // Deletes  and types
-                      2000, // Waits 2s
-                      "Front-end Developer",
-                      3000,
-                    ]}
-                    wrapper="div"
-                    cursor={true}
-                    repeat={Infinity}
-                    style={{ fontSize: '2em' }}
-                  />
-                </h1>
-                <span className="profile-role-tagline">
-                  creating application with passion
-                </span>
+                <TypeAnimation
+                  sequence={[
+                    'Developer',
+                    2000, // Waits 2s
+                    'My name is Moran', // Deletes  and types
+                    2000, // Waits 2s
+                    "Front-end Developer",
+                    3000,
+                  ]}
+                  wrapper="div"
+                  cursor={true}
+                  repeat={Infinity}
+                  className="type-effect"
+                />
+              </div>
+              <span className="profile-role-tagline">
+                creating application with passion
               </span>
             </span>
+
           </div>
 
           <div className="profile-options">
-            {" "}Hire Me{" "}
+            <button className='btn primary-btn'>
+              {" "}Hire Me{" "}
+            </button>
+
             <a href="file.pdf" download="file.pdf">
-              <button className="btn primary-btn">
+              <button className="btn highlighted-btn">
                 Get Resume</button>
             </a>
           </div>
-          <div className="profile-picture">
-            <div className="profile picture-background">
+        </div>
 
-            </div>
+        <div className="profile-picture">
+          <div className="profile picture-background">
           </div>
         </div>
+
       </div>
     </div >
   );
